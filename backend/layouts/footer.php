@@ -13,29 +13,35 @@
 
                          </ul>
                          <div class="sidebar-heading">Pages</div>
-                         <div class="sidebar-block p-0 mb-0">
-                             <ul class="sidebar-menu">
-                                 <li class="sidebar-menu-item">
-                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#service">
-                                         <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">info</i>
-                                         <span class="sidebar-menu-text">Services</span>
-                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                     </a>
-                                     <ul class="sidebar-submenu collapse" id="service">
-                                         <li class="sidebar-menu-item">
-                                             <a class="sidebar-menu-button" href="../services/add.php">
-                                                 <span class="sidebar-menu-text">Add Service</span>
-                                             </a>
-                                         </li>
-                                         <li class="sidebar-menu-item">
-                                             <a class="sidebar-menu-button" href="../services/service_lists.php">
-                                                 <span class="sidebar-menu-text">Service lists</span>
-                                             </a>
-                                         </li>
-                                     </ul>
-                                 </li>
-                             </ul>
-                         </div>
+                         <?php
+                         if ($_SESSION["user_role"] == "admin") {?>
+
+                            <div class="sidebar-block p-0 mb-0">
+                                <ul class="sidebar-menu">
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" data-toggle="collapse" href="#service">
+                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">info</i>
+                                            <span class="sidebar-menu-text">Services</span>
+                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <ul class="sidebar-submenu collapse" id="service">
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button" href="../services/add.php">
+                                                    <span class="sidebar-menu-text">Add Service</span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button" href="../services/service_lists.php">
+                                                    <span class="sidebar-menu-text">Service lists</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        <?php
+                         }
+                         ?>
 
                          <div class="d-flex align-items-center sidebar-p-a border-bottom sidebar-account">
                              <a href="profile.html" class="flex d-flex align-items-center text-underline-0 text-body">
