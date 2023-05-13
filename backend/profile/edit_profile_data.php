@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("../../db_connect.php");
+require_once("../db_connect.php");
 $user_id = $_SESSION["user_id"];
 $flag = false;
 

@@ -1,5 +1,5 @@
 <?php
-require_once("../../db_connect.php");
+require_once("../db_connect.php");
 session_start();
 $email = htmlspecialchars(trim($_POST["email"]));
 $password = htmlspecialchars(trim($_POST["password"]));

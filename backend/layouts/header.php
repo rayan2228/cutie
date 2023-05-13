@@ -1,9 +1,9 @@
 <?php
 session_start();
+require_once("../db_connect.php");
 if (!isset($_SESSION["user_id"])) {
     header("location:../auth/login.php");
 }
-require_once("../../db_connect.php")
 ?>
 
 <!DOCTYPE html>
@@ -33,17 +33,10 @@ require_once("../../db_connect.php")
     <link type="text/css" href="../assets/css/vendor-fontawesome-free.css" rel="stylesheet">
     <link type="text/css" href="../assets/css/vendor-fontawesome-free.rtl.css" rel="stylesheet">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <!-- Include a required theme -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-133433427-1');
-    </script>
+
 
     <!-- Flatpickr -->
     <link type="text/css" href="../assets/css/vendor-flatpickr.css" rel="stylesheet">

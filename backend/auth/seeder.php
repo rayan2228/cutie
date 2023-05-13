@@ -1,5 +1,5 @@
 <?php
-require_once("../../db_connect.php");
+require_once("../db_connect.php");
 function adminSeeding($db_connect)
 {
     $password = sha1("123456");

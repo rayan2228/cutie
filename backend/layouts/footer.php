@@ -136,7 +136,7 @@
              <script src="../assets/vendor/jqvmap/jquery.vmap.min.js"></script>
              <script src="../assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
              <script src="../assets/js/vector-maps.js"></script>
-
+          
              </body>
 
              </html>
