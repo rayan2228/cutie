@@ -10,80 +10,29 @@
                                  </a>
                              </li>
 
-                             <li class="sidebar-menu-item">
-                                 <a class="sidebar-menu-button" data-toggle="collapse" href="#apps_menu">
-                                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">slideshow</i>
-                                     <span class="sidebar-menu-text">Apps</span>
-                                     <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                 </a>
-                                 <ul class="sidebar-submenu collapse" id="apps_menu">
-                                     <li class="sidebar-menu-item">
-                                         <a class="sidebar-menu-button" href="app-activities.html">
-                                             <span class="sidebar-menu-text">Activities</span>
-                                         </a>
-                                     </li>
-                                     <li class="sidebar-menu-item">
-                                         <a class="sidebar-menu-button" href="app-trello.html">
-                                             <span class="sidebar-menu-text">Trello</span>
-                                         </a>
-                                     </li>
-                                     <li class="sidebar-menu-item">
-                                         <a class="sidebar-menu-button" href="app-projects.html">
-                                             <span class="sidebar-menu-text">Projects</span>
-                                         </a>
-                                     </li>
-                                     <li class="sidebar-menu-item">
-                                         <a class="sidebar-menu-button" href="app-fullcalendar.html">
-                                             <span class="sidebar-menu-text">Event Calendar</span>
-                                         </a>
-                                     </li>
-                                     <li class="sidebar-menu-item">
-                                         <a class="sidebar-menu-button" href="app-chat.html">
-                                             <span class="sidebar-menu-text">Chat</span>
-                                         </a>
-                                     </li>
-                                     <li class="sidebar-menu-item">
-                                         <a class="sidebar-menu-button" href="app-email.html">
-                                             <span class="sidebar-menu-text">Email</span>
-                                         </a>
-                                     </li>
-                                     <li class="sidebar-menu-item ">
-                                         <a class="sidebar-menu-button" data-toggle="collapse" href="#course_menu">
-                                             <span class="sidebar-menu-text">Education</span>
-                                             <span class="ml-auto d-flex align-items-center">
-                                                 <span class="badge badge-primary">NEW</span>
-                                                 <span class="sidebar-menu-toggle-icon"></span>
-                                             </span>
-                                         </a>
-                                         <ul class="sidebar-submenu collapse " id="course_menu">
-                                             <li class="sidebar-menu-item ">
-                                                 <a class="sidebar-menu-button" href="app-browse-courses.html">
-                                                     <span class="sidebar-menu-text">Browse Courses</span>
-                                                 </a>
-                                             </li>
-                                             <li class="sidebar-menu-item ">
-                                                 <a class="sidebar-menu-button" href="app-course.html">
-                                                     <span class="sidebar-menu-text">Course</span>
-                                                 </a>
-                                             </li>
-                                             <li class="sidebar-menu-item ">
-                                                 <a class="sidebar-menu-button" href="app-lesson.html">
-                                                     <span class="sidebar-menu-text">Lesson</span>
-                                                 </a>
-                                             </li>
-                                         </ul>
-                                     </li>
-                                 </ul>
-                             </li>
+
                          </ul>
-                         <div class="sidebar-heading">Components</div>
+                         <div class="sidebar-heading">Pages</div>
                          <div class="sidebar-block p-0 mb-0">
-                             <ul class="sidebar-menu" id="components_menu">
+                             <ul class="sidebar-menu">
                                  <li class="sidebar-menu-item">
-                                     <a class="sidebar-menu-button" href="ui-buttons.html">
-                                         <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">mouse</i>
-                                         <span class="sidebar-menu-text">Buttons</span>
+                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#service">
+                                         <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">info</i>
+                                         <span class="sidebar-menu-text">Services</span>
+                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                      </a>
+                                     <ul class="sidebar-submenu collapse" id="service">
+                                         <li class="sidebar-menu-item">
+                                             <a class="sidebar-menu-button" href="../services/add.php">
+                                                 <span class="sidebar-menu-text">Add Service</span>
+                                             </a>
+                                         </li>
+                                         <li class="sidebar-menu-item">
+                                             <a class="sidebar-menu-button" href="../services/service_lists.php">
+                                                 <span class="sidebar-menu-text">Service lists</span>
+                                             </a>
+                                         </li>
+                                     </ul>
                                  </li>
                              </ul>
                          </div>

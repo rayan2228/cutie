@@ -46,26 +46,26 @@
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <div class="spinner"></div>
-                <div class="txt-loading">
-                    <span data-text-preloader="S" class="letters-loading">
-                        S
-                    </span>
-                    <span data-text-preloader="P" class="letters-loading">
-                        P
-                    </span>
-                    <span data-text-preloader="R" class="letters-loading">
-                        R
-                    </span>
-                    <span data-text-preloader="U" class="letters-loading">
-                        U
-                    </span>
-                    <span data-text-preloader="C" class="letters-loading">
-                        C
-                    </span>
-                    <span data-text-preloader="E" class="letters-loading">
-                        E
-                    </span>
-                </div>
+            <div class="txt-loading">
+                <span data-text-preloader="S" class="letters-loading">
+                    S
+                </span>
+                <span data-text-preloader="P" class="letters-loading">
+                    P
+                </span>
+                <span data-text-preloader="R" class="letters-loading">
+                    R
+                </span>
+                <span data-text-preloader="U" class="letters-loading">
+                    U
+                </span>
+                <span data-text-preloader="C" class="letters-loading">
+                    C
+                </span>
+                <span data-text-preloader="E" class="letters-loading">
+                    E
+                </span>
+            </div>
             <p class="text-center">Loading</p>
         </div>
         <div class="loader">
@@ -100,12 +100,12 @@
                             <li><a href="#">Home</a>
                                 <ul class="sub-menu">
                                     <li>
-                                       <a href="index.html">Homepage 1</a>
+                                        <a href="index.html">Homepage 1</a>
                                     </li>
                                     <li>
-                                       <a href="index-2.html">Homepage 2</a>
+                                        <a href="index-2.html">Homepage 2</a>
                                     </li>
-                                 </ul>
+                                </ul>
                             </li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#services">services</a></li>
@@ -116,8 +116,8 @@
                         </ul>
                     </div>
                     <div class="hire-me-btn d-inline-block mt-3">
-                        <a href="#" class="hire-btn">Hire Me</a> 
-                    </div>                   
+                        <a href="#" class="hire-btn">Hire Me</a>
+                    </div>
                 </div>
                 <div class="col-6 d-block d-lg-none">
                     <div class="menu-toggle text-right">
@@ -190,7 +190,7 @@
                 </div>
             </div>
         </div>
-    </section> <!-- /.page-banner-wrap -->    
+    </section> <!-- /.page-banner-wrap -->
 
 
     <!-- 
@@ -227,7 +227,7 @@
                         <div class="col-12 col-md-6">
                             <span>Categories:</span>
                             <a href="#">aciform</a>
-                            <a href="#">arrangement</a>                           
+                            <a href="#">arrangement</a>
                         </div>
                     </div> <!-- /.post-tags-cate-section row -->
 
@@ -245,7 +245,7 @@
                                 <img src="assets/img/comment1.png" alt="">
                                 <div class="commentor-info">
                                     <h5>Kendra Ratzlay</h5>
-                                    <span>August 14, 2019  at 11:35pm</span>
+                                    <span>August 14, 2019 at 11:35pm</span>
                                 </div>
                                 <div class="comment-text">
                                     <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized</p>
@@ -256,7 +256,7 @@
                                 <img src="assets/img/comment2.png" alt="">
                                 <div class="commentor-info">
                                     <h5>Salman Ahmed</h5>
-                                    <span>August 14, 2019  at 11:35pm</span>
+                                    <span>August 14, 2019 at 11:35pm</span>
                                 </div>
                                 <div class="comment-text">
                                     <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized</p>
@@ -267,7 +267,7 @@
                                 <img src="assets/img/comment1.png" alt="">
                                 <div class="commentor-info">
                                     <h5>Kendra Ratzlay</h5>
-                                    <span>August 14, 2019  at 11:35pm</span>
+                                    <span>August 14, 2019 at 11:35pm</span>
                                 </div>
                                 <div class="comment-text">
                                     <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized</p>
@@ -382,7 +382,7 @@
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>                     
+                        </div>
                     </div> <!-- /.single-sidebar-widgets -->
 
                 </div> <!-- /.col-lg-4 col-sm-12 -->
