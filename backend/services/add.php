@@ -27,6 +27,8 @@ require_once("../layouts/header.php");
                         <div class="form-group">
                             <label>Service Name</label>
                             <input type="text" class="form-control" name="service_name">
+                            <input type="date" name="start_date">
+                            <input type="date" name="end_date">
                         </div>
                         <div class="form-group">
                             <label>Service Description</label>
@@ -34,7 +36,18 @@ require_once("../layouts/header.php");
                         </div>
                         <div class="form-group">
                             <label>Service icon</label>
-                            <input type="text" class="form-control" name="service_icon">
+                            <input type="text" class="form-control service_icon" name="service_icon" readonly>
+                            <?php
+                            require_once("../icons.php"); ?>
+                            <div style="overflow: scroll; height: 200px; text-align: justify; margin: 15px 0px; overflow-x: hidden;">
+                                <?php
+                                foreach ($icons as $key => $value) : ?>
+                                    <span class="badge badge-primary icons" style="margin:2px; cursor: pointer;"><i class="<?= $key ?>" style="font-size: 14px;" onclick="click()"></i></span>
+
+                                <?php
+                                endforeach;
+                                ?>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>Service status</label>
@@ -70,10 +83,17 @@ require_once("../layouts/header.php");
 
                 Toast.fire({
                     icon: 'success',
-                    title: '<?=$_SESSION["success"]?>'
+                    title: '<?= $_SESSION["success"] ?>'
                 })
             </script>
         <?php
         }
         unset($_SESSION["success"]);
         ?>
+        <script>
+            $(document).ready(function() {
+                $(".icons").click(function() {
+                    $(".service_icon").val($(this).children().attr("class"))
+                });
+            });
+        </script>

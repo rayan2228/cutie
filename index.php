@@ -1,3 +1,7 @@
+<?php
+require_once("./backend/db_connect.php")
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +34,7 @@
     <link rel="stylesheet" href="./frontend/assets/css/bootstrap.min.css">
     <!--  main style css file -->
     <link rel="stylesheet" href="./frontend/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- template main style css file -->
     <link rel="stylesheet" href="style.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -208,33 +213,23 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="single-service service-1 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                        <div class="icon">
-                            <img src="./frontend/assets/img/icons/creativity.png" alt="">
+                <?php
+                $service_list = "SELECT * FROM services WHERE status='active' LIMIT 3";
+                $service_list_query = mysqli_query($db_connect, $service_list);
+                foreach ($service_list_query as $value) { ?>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-service service-1 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                            <div class="icon">
+                                <i class="<?= $value["service_icon"] ?>"></i>
+                            </div>
+                            <h3><?= $value["service_name"] ?></h3>
+                            <p><?= $value["service_description"] ?></p>
                         </div>
-                        <h3>Creative Design</h3>
-                        <p>Maborisum ipsum dosea ilelite consec Maborisum iesumdolor anim id est laborum</p>
                     </div>
-                </div> <!-- /.single-service -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="single-service service-1 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                        <div class="icon">
-                            <img src="./frontend/assets/img/icons/seo.png" alt="">
-                        </div>
-                        <h3>Digital Marketing</h3>
-                        <p>Maborisum ipsum dosea ilelite consec Maborisum iesumdolor anim id est laborum</p>
-                    </div>
-                </div> <!-- /.single-service -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="single-service service-1 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
-                        <div class="icon">
-                            <img src="./frontend/assets/img/icons/code.png" alt="">
-                        </div>
-                        <h3>Web Coding</h3>
-                        <p>Maborisum ipsum dosea ilelite consec Maborisum iesumdolor anim id est laborum</p>
-                    </div>
-                </div> <!-- /.single-service -->
+                <?php
+                }
+                ?>
+                <!-- /.single-service -->
             </div>
             <div class="contact-promo text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".9s">
                 Have any Work? Fell Free to - <a href="#contact">Contact Me</a>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once("../db_connect.php");
+
 $service_name = htmlspecialchars(trim($_POST["service_name"]));
 $service_description = htmlspecialchars(trim($_POST["service_description"]));
 $service_icon = htmlspecialchars(trim($_POST["service_icon"]));
