@@ -23,38 +23,28 @@ require_once("../layouts/header.php");
 
             <div class="container-fluid page__container">
                 <div class="col-lg-12 card-form__body card-body">
-                    <form action="./add_data.php" method="post">
+                    <form action="./add_data.php" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label>Service Name</label>
-                            <input type="text" class="form-control" name="service_name">
+                            <label>Portfolio image</label>
+                            <input type="file" class="form-control" name="portfolio_image">
                         </div>
                         <div class="form-group">
-                            <label>Service Description</label>
-                            <textarea class="form-control" name="service_description" id="" cols="30" rows="5"></textarea>
+                            <label>select category</label>
+                            <select name="portfolio_category" class="form-control">
+                                <option value="wordpress">wordpress</option>
+                                <option value="Branding">Branding</option>
+                                <option value="website">Web Design</option>
+                                <option value="app">App Design</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label>Service icon</label>
-                            <input type="text" class="form-control service_icon" name="service_icon" readonly>
-                            <?php
-                            require_once("../icons.php"); ?>
-                            <div style="overflow: scroll; height: 200px; text-align: justify; margin: 15px 0px; overflow-x: hidden;">
-                                <?php
-                                foreach ($icons as $key => $value) : ?>
-                                    <span class="badge badge-primary icons" style="margin:2px; cursor: pointer;"><i class="<?= $key ?>" style="font-size: 14px;" onclick="click()"></i></span>
-
-                                <?php
-                                endforeach;
-                                ?>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Service status</label>
-                            <select name="service_status" id="" class="form-control">
+                            <label>portfolio status</label>
+                            <select name="portfolio_status" id="" class="form-control">
                                 <option value="active">active</option>
                                 <option value="inactive">inactive</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">add service</button>
+                        <button type="submit" class="btn btn-primary">add portfolio</button>
                     </form>
                 </div>
             </div>

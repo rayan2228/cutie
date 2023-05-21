@@ -1,5 +1,9 @@
 <?php
 require_once("../layouts/header.php");
+$id = $_GET["id"];
+$service = "SELECT * FROM services WHERE id=$id";
+$service_query = mysqli_query($db_connect, $service);
+$service_query_assoc = mysqli_fetch_assoc($service_query);
 ?>
 <!-- Header Layout Content -->
 <div class="mdk-header-layout__content">
@@ -23,19 +27,21 @@ require_once("../layouts/header.php");
 
             <div class="container-fluid page__container">
                 <div class="col-lg-12 card-form__body card-body">
-                    <form action="./add_data.php" method="post">
+                    <form action="./update_data.php" method="post">
                         <div class="form-group">
                             <label>Service Name</label>
-                            <input type="text" class="form-control" name="service_name">
+                            <input type="text" class="form-control" name="service_name" value="<?= $service_query_assoc["service_name"] ?>">
+                            <input type="hidden" name="id" value="<?= $id ?>">
                         </div>
                         <div class="form-group">
                             <label>Service Description</label>
-                            <textarea class="form-control" name="service_description" id="" cols="30" rows="5"></textarea>
+                            <textarea class="form-control" name="service_description" id="" cols="30" rows="5"><?= $service_query_assoc["service_description"] ?></textarea>
                         </div>
                         <div class="form-group">
                             <label>Service icon</label>
-                            <input type="text" class="form-control service_icon" name="service_icon" readonly>
+                            <input type="text" class="form-control service_icon" name="service_icon" readonly value="<?= $service_query_assoc["service_icon"] ?>">
                             <?php
+
                             require_once("../icons.php"); ?>
                             <div style="overflow: scroll; height: 200px; text-align: justify; margin: 15px 0px; overflow-x: hidden;">
                                 <?php
@@ -50,11 +56,11 @@ require_once("../layouts/header.php");
                         <div class="form-group">
                             <label>Service status</label>
                             <select name="service_status" id="" class="form-control">
-                                <option value="active">active</option>
-                                <option value="inactive">inactive</option>
+                                <option value="active" <?= $service_query_assoc["status"] === 'active' ? 'selected' : '' ?>>active</option>
+                                <option value="inactive" <?= $service_query_assoc["status"] === 'inactive' ? 'selected' : '' ?>>inactive</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">add service</button>
+                        <button type="submit" class="btn btn-primary">update service</button>
                     </form>
                 </div>
             </div>
@@ -67,7 +73,7 @@ require_once("../layouts/header.php");
         require_once("../layouts/footer.php");
         if (isset($_SESSION["success"])) { ?>
             <script>
-                const Toast = Swal.mixin({
+                let Toast = Swal.mixin({
                     toast: true,
                     position: 'top-end',
                     showConfirmButton: false,
@@ -82,6 +88,27 @@ require_once("../layouts/header.php");
                 Toast.fire({
                     icon: 'success',
                     title: '<?= $_SESSION["success"] ?>'
+                })
+            </script>
+        <?php
+        } else if (isset($_SESSION["error"])) { ?>
+
+            <script>
+                 Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'error',
+                    title: '<?= $_SESSION["error"] ?>'
                 })
             </script>
         <?php

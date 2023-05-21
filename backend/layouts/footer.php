@@ -14,34 +14,53 @@
                          </ul>
                          <div class="sidebar-heading">Pages</div>
                          <?php
-                         if ($_SESSION["user_role"] == "admin") {?>
+                            if ($_SESSION["user_role"] == "admin") { ?>
 
-                            <div class="sidebar-block p-0 mb-0">
-                                <ul class="sidebar-menu">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" data-toggle="collapse" href="#service">
-                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">info</i>
-                                            <span class="sidebar-menu-text">Services</span>
-                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                        </a>
-                                        <ul class="sidebar-submenu collapse" id="service">
-                                            <li class="sidebar-menu-item">
-                                                <a class="sidebar-menu-button" href="../services/add.php">
-                                                    <span class="sidebar-menu-text">Add Service</span>
-                                                </a>
-                                            </li>
-                                            <li class="sidebar-menu-item">
-                                                <a class="sidebar-menu-button" href="../services/service_lists.php">
-                                                    <span class="sidebar-menu-text">Service lists</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        <?php
-                         }
-                         ?>
+                             <div class="sidebar-block p-0 mb-0">
+                                 <ul class="sidebar-menu">
+                                     <li class="sidebar-menu-item">
+                                         <a class="sidebar-menu-button" data-toggle="collapse" href="#service">
+                                             <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">info</i>
+                                             <span class="sidebar-menu-text">Services</span>
+                                             <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                         </a>
+                                         <ul class="sidebar-submenu collapse" id="service">
+                                             <li class="sidebar-menu-item">
+                                                 <a class="sidebar-menu-button" href="../services/add.php">
+                                                     <span class="sidebar-menu-text">Add Service</span>
+                                                 </a>
+                                             </li>
+                                             <li class="sidebar-menu-item">
+                                                 <a class="sidebar-menu-button" href="../services/service_lists.php">
+                                                     <span class="sidebar-menu-text">Service lists</span>
+                                                 </a>
+                                             </li>
+                                         </ul>
+                                     </li>
+                                     <li class="sidebar-menu-item">
+                                         <a class="sidebar-menu-button" data-toggle="collapse" href="#portfolio">
+                                             <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">info</i>
+                                             <span class="sidebar-menu-text">Services</span>
+                                             <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                         </a>
+                                         <ul class="sidebar-submenu collapse" id="portfolio">
+                                             <li class="sidebar-menu-item">
+                                                 <a class="sidebar-menu-button" href="../portfolio/add.php">
+                                                     <span class="sidebar-menu-text">Add portfolio</span>
+                                                 </a>
+                                             </li>
+                                             <li class="sidebar-menu-item">
+                                                 <a class="sidebar-menu-button" href="../portfolio/portfolio_lists.php">
+                                                     <span class="sidebar-menu-text">portfolio lists</span>
+                                                 </a>
+                                             </li>
+                                         </ul>
+                                     </li>
+                                 </ul>
+                             </div>
+                         <?php
+                            }
+                            ?>
 
                          <div class="d-flex align-items-center sidebar-p-a border-bottom sidebar-account">
                              <a href="profile.html" class="flex d-flex align-items-center text-underline-0 text-body">
@@ -142,7 +161,7 @@
              <script src="../assets/vendor/jqvmap/jquery.vmap.min.js"></script>
              <script src="../assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
              <script src="../assets/js/vector-maps.js"></script>
-          
+
              </body>
 
              </html>

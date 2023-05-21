@@ -47,7 +47,7 @@ $service_list_query = mysqli_query($db_connect, $service_list);
                                     <td><?= $value["service_description"] ?></td>
                                     <td><?= $value["service_icon"] ?></td>
                                     <td><?= $value["status"] ?></td>
-                                    <td><a href="" class="btn btn-info">update</a> <a href="./delete.php/?id=<?=$value["id"]?>" class="btn btn-danger">delete</a></td>
+                                    <td><a href="./update.php?id=<?= $value["id"] ?>" class="btn btn-info">update</a> <a href="./delete.php/?id=<?= $value["id"] ?>" class="btn btn-danger">delete</a></td>
                                 </tr>
                             <?php
                             endforeach;
