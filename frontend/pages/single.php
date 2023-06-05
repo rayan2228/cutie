@@ -10,26 +10,26 @@
     <!-- ======== Page title ============ -->
     <title>SPRUCE - Portfolio HTML Template</title>
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" href="../assets/img/favicon.png">
     <!-- ===========  All Stylesheet ================= -->
     <!--  Icon css plugins -->
-    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="stylesheet" href="../assets/css/icons.css">
     <!--  animate css plugins -->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
     <!--  magnific-popup css plugins -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
     <!--  owl carosuel css plugins -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
     <!-- metisMenu css file -->
-    <link rel="stylesheet" href="assets/css/metismenu.css">
+    <link rel="stylesheet" href="../assets/css/metismenu.css">
     <!-- progresscircle css file -->
-    <link rel="stylesheet" href="assets/css/progresscircle.css">
+    <link rel="stylesheet" href="../assets/css/progresscircle.css">
     <!--  owl theme css plugins -->
-    <link rel="stylesheet" href="assets/css/owl.theme.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.css">
     <!--  Bootstrap css plugins -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <!--  main style css file -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <!-- template main style css file -->
     <link rel="stylesheet" href="style.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -203,7 +203,7 @@
             <div class="row">
                 <div class="col-lg-8 col-12">
                     <div class="single-blog-details">
-                        <img class="featured-thubnail" src="assets/img/blog-featured.jpg" alt="blog">
+                        <img class="featured-thubnail" src="../assets/img/blog-featured.jpg" alt="blog">
                         <h1>Top 10 Tips For Branding</h1>
                         <div class="post-meta mt-3">
                             <span class="p-date"><strong>Date:</strong>15 June 2020</span>
@@ -232,7 +232,7 @@
                     </div> <!-- /.post-tags-cate-section row -->
 
                     <div class="author-bio-section">
-                        <img src="assets/img/author-img.png" alt="">
+                        <img src="../assets/img/author-img.png" alt="">
                         <h4><a href="#">Walton De Singer</a></h4>
                         <span>On the other hand, we denounce with righteous indignation and dislike men.</span>
                     </div> <!-- /.author-bio-section -->
@@ -242,7 +242,7 @@
 
                         <div class="comment-lists">
                             <div class="single-comment">
-                                <img src="assets/img/comment1.png" alt="">
+                                <img src="../assets/img/comment1.png" alt="">
                                 <div class="commentor-info">
                                     <h5>Kendra Ratzlay</h5>
                                     <span>August 14, 2019 at 11:35pm</span>
@@ -253,7 +253,7 @@
                                 </div>
                             </div> <!-- /.single-comment -->
                             <div class="single-comment">
-                                <img src="assets/img/comment2.png" alt="">
+                                <img src="../assets/img/comment2.png" alt="">
                                 <div class="commentor-info">
                                     <h5>Salman Ahmed</h5>
                                     <span>August 14, 2019 at 11:35pm</span>
@@ -264,7 +264,7 @@
                                 </div>
                             </div> <!-- /.single-comment -->
                             <div class="single-comment replay">
-                                <img src="assets/img/comment1.png" alt="">
+                                <img src="../assets/img/comment1.png" alt="">
                                 <div class="commentor-info">
                                     <h5>Kendra Ratzlay</h5>
                                     <span>August 14, 2019 at 11:35pm</span>
@@ -402,25 +402,25 @@
 
     <!--  ALl JS Plugins
     ====================================== -->
-    <script src="assets/js/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/modernizr-3.7.1.min.js"></script>
-    <script src="assets/js/jquery.easing.1.3.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/imageload.min.js"></script>
-    <script src="assets/js/scrollUp.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <script src="assets/js/waypoint.js"></script>
-    <script src="assets/js/counterup.min.js"></script>
-    <script src="assets/js/typed.min.js"></script>
-    <script src="assets/js/metismenu.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/progresscircle.js"></script>
-    <script src="assets/js/barfiller.js"></script>
-    <script src="assets/js/ajax-mail.js"></script>
-    <script src="assets/js/active.js"></script>
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/modernizr-3.7.1.min.js"></script>
+    <script src="../assets/js/jquery.easing.1.3.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/isotope.pkgd.min.js"></script>
+    <script src="../assets/js/imageload.min.js"></script>
+    <script src="../assets/js/scrollUp.min.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/magnific-popup.min.js"></script>
+    <script src="../assets/js/waypoint.js"></script>
+    <script src="../assets/js/counterup.min.js"></script>
+    <script src="../assets/js/typed.min.js"></script>
+    <script src="../assets/js/metismenu.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
+    <script src="../assets/js/progresscircle.js"></script>
+    <script src="../assets/js/barfiller.js"></script>
+    <script src="../assets/js/ajax-mail.js"></script>
+    <script src="../assets/js/active.js"></script>
 </body>
 
 </html>

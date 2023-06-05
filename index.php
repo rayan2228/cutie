@@ -47,7 +47,7 @@ require_once("./backend/db_connect.php")
 
 <body>
 
-    <!-- preloader -->
+    <!-- preloader
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <div class="spinner"></div>
@@ -89,7 +89,7 @@ require_once("./backend/db_connect.php")
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <header class="header-section header-style-1">
         <div class="container">
@@ -510,62 +510,32 @@ require_once("./backend/db_connect.php")
                 <div class="col-md-12 text-center">
                     <div class="portfolio-filter mt-4 mt-sm-5">
                         <button data-filter="*" class="active">All</button>
-                        <button data-filter=".wordpress">WordPress</button>
-                        <button data-filter=".branding">Branding</button>
-                        <button data-filter=".website">Web Design</button>
-                        <button data-filter=".app">App Design</button>
+                        <?php
+                        $portfolio_list = "SELECT * FROM portfolioes WHERE portfolio_status='active'";
+                        $portfolio_list_query = mysqli_query($db_connect, $portfolio_list);
+                        foreach ($portfolio_list_query as $value) : ?>
+                            <button data-filter=".<?= $value['portfolio_category'] ?>"><?= $value['portfolio_category'] ?></button>
+                        <?php
+                        endforeach;
+                        ?>
                     </div>
                 </div>
             </div>
             <div class="row grid p-0">
-                <div class="col-lg-4 col-md-6 col-12 grid-item branding">
-                    <div class="single-portfolio-item">
-                        <a href="./frontend/assets/img/portfolio/1.jpg" class="popup-gallery">
-                            <img class="img-fluid" src="./frontend/assets/img/portfolio/1.jpg" alt="">
-                            <span class="zoom-icon">+</span>
-                        </a>
+                <?php
+                foreach ($portfolio_list_query as $value) : ?>
+                    <div class="col-lg-4 col-md-6 col-12 grid-item <?= $value["portfolio_category"] ?>">
+                        <div class="single-portfolio-item">
+                            <a href="./uploads/portfolio/<?= $value["portfolio_image"] ?>" class="popup-gallery">
+                                <img class="img-fluid" src="./uploads/portfolio/<?= $value["portfolio_image"] ?>" alt="">
+                                <span class="zoom-icon">+</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item wordpress website app">
-                    <div class="single-portfolio-item">
-                        <a href="./frontend/assets/img/portfolio/web1.jpg" class="popup-gallery">
-                            <img class="img-fluid" src="./frontend/assets/img/portfolio/web1.jpg" alt="">
-                            <span class="zoom-icon">+</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item branding">
-                    <div class="single-portfolio-item">
-                        <a href="./frontend/assets/img/portfolio/4.jpg" class="popup-gallery">
-                            <img class="img-fluid" src="./frontend/assets/img/portfolio/4.jpg" alt="">
-                            <span class="zoom-icon">+</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item branding app">
-                    <div class="single-portfolio-item">
-                        <a href="./frontend/assets/img/portfolio/5.jpg" class="popup-gallery">
-                            <img class="img-fluid" src="./frontend/assets/img/portfolio/5.jpg" alt="">
-                            <span class="zoom-icon">+</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item wordpress">
-                    <div class="single-portfolio-item">
-                        <a href="./frontend/assets/img/portfolio/6.jpg" class="popup-gallery">
-                            <img class="img-fluid" src="./frontend/assets/img/portfolio/6.jpg" alt="">
-                            <span class="zoom-icon">+</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 grid-item wordpress website">
-                    <div class="single-portfolio-item">
-                        <a href="./frontend/assets/img/portfolio/web2.jpg" class="popup-gallery">
-                            <img class="img-fluid" src="./frontend/assets/img/portfolio/web2.jpg" alt="">
-                            <span class="zoom-icon">+</span>
-                        </a>
-                    </div>
-                </div>
+                <?php
+                endforeach;
+                ?>
+
             </div>
         </div>
     </section>

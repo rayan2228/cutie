@@ -40,7 +40,7 @@
                                      <li class="sidebar-menu-item">
                                          <a class="sidebar-menu-button" data-toggle="collapse" href="#portfolio">
                                              <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">info</i>
-                                             <span class="sidebar-menu-text">Services</span>
+                                             <span class="sidebar-menu-text">Portfolio</span>
                                              <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                          </a>
                                          <ul class="sidebar-submenu collapse" id="portfolio">
