@@ -1,5 +1,6 @@
 <?php
-require_once("./backend/db_connect.php")
+require_once("./backend/db_connect.php");
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -165,7 +166,7 @@ require_once("./backend/db_connect.php")
                             </ul>
                         </nav>
 
-                        <a href="#" class="theme-btn mt-4">+ Download CV</a>
+                        <a href="./frontend/assets/cv/cv.pdf" class="theme-btn mt-4" download="./frontend/assets/cv/cv.pdf">+ rayan CV</a>
                     </div>
                 </div>
             </div>
@@ -183,7 +184,7 @@ require_once("./backend/db_connect.php")
                             <h3 class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1.3s">I'm a <span class="profession"></span></h3>
                         </div>
                         <p class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1.6s">Maborisum ipsum dolor seat ameat consecteturetel seat more be elite consecteture.</p>
-                        <a href="#" class="theme-btn wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1.9s">+ Download CV</a>
+                        <a href="./frontend/assets/cv/cv.pdf" class="theme-btn wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1.9s" download>+ Download CV</a>
 
                         <div class="social-profile">
                             <a href="#" class="wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="2.2s"><i class="fal fa-plus"></i>facebook</a>
@@ -687,7 +688,8 @@ require_once("./backend/db_connect.php")
             <div class="row">
                 <div class="col-12 col-lg-7">
                     <div class="contact-form-wraper">
-                        <form action="mail.php" id="contact-form" method="POST" class="row">
+                        <?= $_SESSION["mail_sent"] ?>
+                        <form action="./backend/mail/client_mail.php" method="post" class="row">
                             <div class="col-md-6 col-12">
                                 <div class="single-input">
                                     <input type="text" name="name" id="name" placeholder="Spruce Springlane">
@@ -703,9 +705,7 @@ require_once("./backend/db_connect.php")
                                     <textarea placeholder="Message" name="message" id="message"></textarea>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <button class="theme-btn">+ Mesage Me</button>
-                            </div>
+                            <button class="theme-btn" type="submit">+ Mesage Me</button>
                         </form>
                     </div>
                 </div> <!-- col-12 col-lg-8 -->
@@ -738,7 +738,9 @@ require_once("./backend/db_connect.php")
             </div>
         </div>
     </footer>
-
+    <?php
+    session_unset();
+    ?>
     <!--  ALl JS Plugins
     ====================================== -->
     <script src="./frontend/assets/js/jquery-1.12.4.min.js"></script>
